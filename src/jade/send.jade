@@ -1,0 +1,123 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号查询
+
+block styles
+
+block content
+  .order-send 
+    form(class="form-horizontal input-form")
+      .container.send-part
+        .form-group
+          label(class="col-xs-3 control-label form-label") 寄&nbsp;&nbsp;件&nbsp;人： 
+          .col-xs-9.input-area
+            input(type="text",class="form-control")
+        .form-group.input-area
+          label(class="col-xs-3 control-label form-label") 手&nbsp;&nbsp;机&nbsp;号： 
+          .col-xs-9.input-area
+            input(type="text",class="form-control")
+        .form-group
+          label(class="col-xs-3 control-label form-label") 寄件地址： 
+          .col-xs-9.input-area
+            textarea(class="form-control",row="5",cols="10")
+            .locate.centered
+                a(href="",class="link-grey") 
+                  img(src="./images/locate.png",class="locate-icon")
+
+        .form-group
+          .col-xs-9.col-xs-offset-3.input-area
+            a(href="#aa",class="btn btn-grey btn-block")
+              span 从地址管理里添加
+              span.left-arrow.fa.fa-angle-right
+
+      .receive-part
+        .container
+          .form-group
+            label(class="col-xs-3 control-label form-label") 备注： 
+            .col-xs-9.input-area
+              textarea(class="form-control",row="3")
+          .form-group.centered
+            a(href="#fee-search",data-toggle="collapse",class="fee-link") 
+              span 运费&实效查询
+              i.fa.fa-angle-down
+              i.fa.fa-angle-up.hidden
+      #fee-search.collapse
+        .container.receive-part-receiver
+          .form-group
+            label(class="col-xs-3 control-label form-label") 寄&nbsp;&nbsp;件&nbsp;人： 
+            .col-xs-9.input-area
+              input(type="text",class="form-control")
+          .form-group
+            label(class="col-xs-3 control-label form-label") 手&nbsp;&nbsp;机&nbsp;号： 
+            .col-xs-9.input-area
+              input(type="text",class="form-control")
+          .form-group
+            label(class="col-xs-3 control-label form-label") 寄件地址： 
+            .col-xs-9.input-area
+              textarea(class="form-control",row="3")
+              .locate.centered
+                a(href="",class="link-grey") 
+                  img(src="./images/locate.png",class="locate-icon")
+          .form-group
+            .col-xs-9.col-xs-offset-3.input-area
+              a(href="#aa",class="btn btn-grey btn-block")
+                span 从地址管理里添加
+                span.left-arrow.fa.fa-angle-right
+        .weight-area
+          .container
+            .form-group
+              label(class="col-xs-3 control-label form-label") 取件时间： 
+              .col-xs-3.input-area
+                select.form-control
+                  option 现在
+                  option 今天
+                  option 明天
+                  option 后天
+              .col-xs-2.input-area
+                select.form-control
+                  each val in [9,10,11,12,13,14,15,16,17,18]
+                    option #{val}
+              .col-xs-1.input-area.time-comma
+                | :
+              .col-xs-2.input-area
+                select.form-control
+                  option 00
+                  option 30
+            .form-group
+              label(class="col-xs-3 control-label form-label") 预计重量： 
+              .col-xs-3.input-area
+                input(type="text",class="form-control",placeholder="kg")
+              .col-xs-6.error-tip.text-red
+                // error tip put here
+            .summary-area
+              .row 
+                .col-xs-6.estimate
+                  p.centered
+                    span 估计运费：
+                    span.red-block 8元
+                  p.small.text-muted.tip 最终价格已快递员报价为准
+                .col-xs-6 
+                  p.centered 
+                    span 预计时间：
+                    span.red-block 2天
+                  p.small.text-muted.tip 最终价格已快递员报价为准
+
+      .submit-area.container
+        a(href="#form-modal",class="btn btn-danger btn-block",data-toggle="modal",data-target="#form-modal") 提交订单
+
+      .container
+        #form-modal.modal.fade
+          .modal-dialog 
+            .modal-content 
+              .modal-body.centered
+                p.text-content
+                  | 请再次核对订单信息，确认提交将不可取消。
+              .modal-footer 
+                .modal-btn-group
+                  a(href="#close",class="link-grey",data-dismiss="modal") 取消
+                .modal-btn-group
+                  a(href="#confirm",class="link-red") 确定
+               

@@ -1,0 +1,91 @@
+
+*
+    box-sizing            border-box !important
+
+
+.container-fluid
+    clearfix()
+    relative()
+    margin                0 auto
+    padding               0
+    width                100%
+
+
+.container
+    clear()
+    clearfix()
+    relative()
+    margin                0 auto
+    padding               0 15px
+
+    @media $xs-small
+      width 100%
+    @media $small
+      width 100%
+    @media $medium
+      width 100%
+
+    @media $large
+      padding 0
+      width 1170px
+
+.row
+    clearfix()
+    row(12)
+    
+.clear 
+  clearfix()
+
+.center-block
+  display block
+  relative()
+  margin 10px auto
+
+.margin
+    margin                $base-spacing-unit
+
+    &--bottom
+        add-margin(bottom)
+
+    &--left
+        add-margin(left)
+
+    &--right
+        add-margin(right)
+
+    &--top
+        add-margin(top)
+
+.padding
+    padding                $base-spacing-unit
+
+    &--bottom
+        add-padding(bottom)
+
+    &--left
+        add-padding(left)
+
+    &--right
+        add-padding(right)
+
+    &--top
+        add-padding(top)
+
+.small
+    &-hidden
+        @media ( max-width: $screen-xs-max)
+            display        none !important
+    &-show
+      display none
+      @media ( max-width: $screen-xs-max)
+         display   block !important
+.medium
+    &-hidden
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max )
+            display        none !important
+
+.large
+    &-hidden
+        @media ( min-width: $screen-md-min)
+            display        none !important
+

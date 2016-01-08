@@ -1,0 +1,210 @@
+
+.thumbnail-head
+  width 60px
+
+.p3
+  margin-bottom 3px
+
+.retweet-icon
+  font-size 18px
+
+.time-comma
+  line-height 34px 
+  font-weight 800
+  height 34px
+  text-align center
+.search-icon
+  width 32px
+  margin 10px auto
+  &-normal 
+    display block
+  &-active 
+    display none
+.search-area
+  margin-top 40px
+
+.search-type
+  clearfix()
+  unstyled-list()
+  li 
+    padding 20px 0
+    fl()
+    width 50%
+    .text
+      display block
+      color $grey-dark-light
+  a 
+     text-align center
+     color $grey-dark-light
+     display inline-block 
+     +ActiveFocusHover()
+       text-decoration none
+    
+  .active
+    color $black
+    .search-icon-active
+      display block
+    .search-icon-normal
+      display none
+    .text
+      color $black
+  &-mobile
+    font-size 14px
+    display inline-block
+    width 50% 
+  &-order
+    font-size 14px
+    display inline-block
+    width 50% 
+  .mobile-icon 
+    display block
+    margin 0
+    font-size 60px
+  .order-icon
+    display block
+    margin 0
+    margin-bottom 8px
+    font-size 40px
+  .text 
+    display block
+    
+    
+
+.mobile-search-result
+  margin 50px auto
+  .mobile-area
+    margin 0 0 30px 20px
+
+.mobile-search-detail
+  margin 40px auto
+  .input-control
+    fl()
+    width 60%
+  .image-addon
+    fl()
+    width 15%
+    background-color $white
+  .button-addon
+    fl()
+    width 25%
+  .order-result-search
+    clearfix()
+  .qcode 
+    display inline-block
+    height 24px
+    margin 4px 4px
+  .order-number
+    margin 30px 0
+  .circle
+    position absolute 
+    border 3px solid #777
+    background transparent
+    border-radius 50%
+    left 0
+    width 18px
+    height 18px
+
+  .order-trace-list
+    relative()
+    unstyled-list()
+    li 
+      relative()
+      padding-left 30px
+    li+li:before 
+      content "  "
+      position absolute 
+      border 0 
+      background #777
+      top -29px
+      left 8px
+      width 2px
+      height 26px
+    a 
+      color $blue
+      text-decoration underline
+    .date
+      color $grey-dark-light
+      font-size 12px
+    .description 
+      color $grey-dark-light
+    .active
+      .circle 
+        border-color $green-heavy 
+      .description
+        color $green
+      .date
+        color $green
+    .active-red
+      .circle 
+        border-color $red 
+      .description
+        color $red
+      .date
+        color $red
+
+
+.delivery-confirm
+  margin 10px 0 40px 0 
+  .sent 
+    padding 20px 15px 
+    //  background linear-gradient(top, 90% white, #777)
+    margin-bottom 10px
+    //box-shadow(0,5px,5px,5px,#777)
+  .receive
+    padding 20px 15px
+    background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
+  .things
+    padding 20px 15px
+    background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
+  .fees
+    margin-top 30px
+    &-send
+      border-right 1px solid $grey-dark-light 
+.order-send
+  margin 40px auto
+  .send-part 
+    background-image url('../images/send.png')
+    background-repeat no-repeat
+    background-size 100px 
+    background-position 2% 90%
+  .collapsed
+    .fa-angle-down
+      display none !important
+    .fa-angle-up
+      display inline-block !important
+  .fa 
+    margin-left 5px
+  .receive-part
+    padding-top 30px
+    background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
+    &-receiver
+      background-image url('../images/receive.png')
+      background-repeat no-repeat
+      background-size 100px 
+      background-position 2% 90%
+
+  .weight-area
+    padding-top 30px
+    background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
+  .submit-area
+    margin-top 40px
+
+  .fee-link
+    color $grey-dark
+    +ActiveFocusHover()
+       text-decoration none
+       color $grey-dark
+ 
+  .summary-area
+    margin-top 20px
+    padding-top 10px
+    padding-left 10px
+    .red-block
+      color $red
+      padding 5px
+
+  .estimate 
+    border-right 1px solid $grey-dark-light
+  .tip 
+    color $grey-dark-light
+    margin-top 20px

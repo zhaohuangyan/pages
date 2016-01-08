@@ -1,0 +1,73 @@
+// Base styles
+
+html,
+body
+    color                   $dark-black
+    font-kerning            auto
+    font-size               14px
+    font-smooth             always
+    font-weight             400
+    line-height             20px
+    // letter-spacing            0.5px
+    text-rendering            optimizeLegibility
+    -webkit-font-smoothing    subpixel-antialiased
+
+a
+    color                    $mid-blue
+    text-decoration            none
+    +ActiveFocusHover()
+        color                $deep-blue
+        
+hr
+  width 100%
+  height 2px
+  margin 20px auto 
+  background $grey-lighter
+  color $grey-lighter
+  border 0 none 
+  
+// Helper classes
+
+.caps
+    text-transform            uppercase
+
+.centered
+    text-align                center
+
+.small
+    font-size                0.85em
+
+.subheading
+    font-size                0.5em
+    margin                    0.3em 0
+
+// Only display content to screen readers
+//
+// See http://a11yproject.com/posts/how-to-hide-content/
+
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"]
+  cursor pointer
+  
+.text-mid-blue
+  color $mid-blue
+  
+.text-bold
+  font-weight bold
+  font-family "Gotham Book"
+  
+.text-black
+  color black
+  
+.text-notbold
+  font-weight normal
+  font-family "Gotham Light"
+  
+.text-small
+  font-size 11px

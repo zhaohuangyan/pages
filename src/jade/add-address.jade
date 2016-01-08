@@ -1,0 +1,33 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号查询
+
+block styles
+
+block content
+  .container 
+    .address-form
+      form(class="form-horizontal input-form")
+        .form-group
+          label(class="col-xs-3 control-label form-label") 姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名： 
+          .col-xs-9.input-area
+            input(type="text",class="form-control")
+        .form-group
+          label(class="col-xs-3 control-label form-label") 手&nbsp;&nbsp机&nbsp;&nbsp号： 
+          .col-xs-9.input-area
+            input(type="text",class="form-control")
+        .form-group
+          label(class="col-xs-3 control-label form-label") 详细地址： 
+          .col-xs-9.input-area
+            textarea(class="form-control",row="3")
+            .locate.centered
+                a(href="",class="link-grey") 
+                  i.fa.fa-map-marker
+
+
+        .search-area 
+          button(class="btn  btn-danger btn-block") 确定
+
