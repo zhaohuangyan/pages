@@ -1,8 +1,5 @@
 # rufengda weixin pages
 
-## show pages
-
-[Demo](http://soarpatriot.github.io/order/) 
 
 An base front-end project for the stylus, jade gulp 
 ## Prerequisites
